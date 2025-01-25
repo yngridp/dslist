@@ -1,7 +1,8 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
-
+// A classe DTO serve para customizar o formato que eu quero que mostre os dados da minha API
+//através do molde da model , posso criar um 2° molde DTO
 public class GameMinDTO {
 
 	private Long id;
