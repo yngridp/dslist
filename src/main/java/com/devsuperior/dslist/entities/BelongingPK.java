@@ -10,22 +10,12 @@ import jakarta.persistence.ManyToOne;
 public class BelongingPK {
 
 	@ManyToOne
-	@JoinColumn(name="game_id")
-	private Game game;
-	
-	@ManyToOne
-	@JoinColumn(name="list_id")
-	private GameList list;
-	
-	public BelongingPK() {
-		
-	}
+    @JoinColumn(name = "game_id")
+    private Game game;
 
-	public BelongingPK(Game game, GameList list) {
-		super();
-		this.game = game;
-		this.list = list;
-	}
+    @ManyToOne
+    @JoinColumn(name = "list_id")
+    private GameList list;
 
 	public Game getGame() {
 		return game;
@@ -59,5 +49,4 @@ public class BelongingPK {
 		BelongingPK other = (BelongingPK) obj;
 		return Objects.equals(game, other.game) && Objects.equals(list, other.list);
 	}
-	
 }

@@ -1,6 +1,7 @@
 package com.devsuperior.dslist.dto;
 
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 // A classe DTO serve para customizar o formato que eu quero que mostre os dados da minha API
 //através do molde da model , posso criar um 2° molde DTO
 public class GameMinDTO {
@@ -20,6 +21,13 @@ public class GameMinDTO {
     	year = entity.getYear();
     	imgUrl = entity.getImgUrl();
     	shortDescription = entity.getShortDescription();	
+    }
+    public GameMinDTO(GameMinProjection projection) {
+    	id = projection.getId();
+    	title = projection.getTitle();
+    	year = projection.getYear();
+    	imgUrl = projection.getImgUrl();
+    	shortDescription = projection.getShortDescription();	
     }
 
 	public Long getId() {
